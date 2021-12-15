@@ -1,0 +1,6 @@
+.THIS .slds-box{
+    border-left: 2px solid green;
+    border-right:2px solid green;
+    border-bottom: 2px solid green;
+    border-radius: 30px;
+}

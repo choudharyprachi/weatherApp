@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" >
+<aura:attribute name="firstdate" type="date"/>
+<aura:attribute name="secondDate" type="date"/>
+<aura:attribute name="city" type="String"/>
+</aura:event>

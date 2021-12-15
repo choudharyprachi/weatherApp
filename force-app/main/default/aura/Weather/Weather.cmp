@@ -1,0 +1,18 @@
+<aura:component controller="WeatherDetail" implements="flexipage:availableForRecordHome,force:appHostable">	
+   	 <!--Handler of the Event-->
+    <aura:handler name="weatherEvent" event="c:WeatherEvent" action="{!c.doShow}"/>
+    <!--Take this attribute to store Weather Object -->
+    <aura:attribute name="ObjectList" type="Object[]"/>
+    <!--Take this attribute to store today whether infornation--> 
+    <div class="slds-grid slds-wrap slds-p-around_xx-small">
+        <div class="slds-col slds-size_1-of-2 slds-p-left_xx-large">
+            <!--Adding weather input component-->
+        	<c:WeatherInput/>
+        </div>
+        	
+        <div class="slds-col slds-size_2-of-2 slds-container ">
+            <!--Adding weather datatable component-->
+            <c:WeatherDatatable data="{!v.ObjectList}"/>
+        </div>
+    </div>
+</aura:component>
