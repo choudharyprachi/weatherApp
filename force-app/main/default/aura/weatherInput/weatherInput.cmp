@@ -1,0 +1,33 @@
+<aura:component >
+    <!--registering the weather event-->
+    <aura:registerEvent name="weatherEvent" type="c:WeatherEvent"/>
+    <div>
+        <fieldset class="slds-box slds-theme_default slds-container_small">
+        <legend id="newewatherform" class="slds-text-title_caps
+          slds-p-vertical_medium">
+          SEARCH WEATHER
+        </legend>
+            <div>
+	<form class="slds-form_stacked">
+        <!--Taking city input as input-->
+            <lightning:input aura:id="cityname" label="CityName"
+                             name="cityname"
+                             required="true"/>
+        <!--Taking date as input-->
+            <lightning:input type="date" aura:id="fromdate" label="StartDate"
+                             name="fromdate"
+                             required="true"/>
+        <!--Taking date as input-->
+        <lightning:input type="date" aura:id="todate" label="EndDate"
+                             name="todate"
+                         	 required="true"/>
+        <!--Taking button for submission-->
+            <lightning:button label="Search"
+                              class="slds-float_right"
+                              variant="success"
+                              onclick="{!c.myAction}"/>
+        </form>
+                </div>
+        </fieldset>
+        </div>
+</aura:component>
